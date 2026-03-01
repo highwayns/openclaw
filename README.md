@@ -197,3 +197,135 @@ Run `openclaw doctor` to surface risky/misconfigured DM policies.
 - [Models](https://docs.openclaw.ai/concepts/models), [model failover](https://docs.openclaw.ai/concepts/model-failover), and [session pruning](https://docs.openclaw.ai/concepts/session-pruning).
 - [Security](https://docs.openclaw.ai/gateway/security) and [troubleshooting](https://docs.openclaw.ai/channels/troubleshooting). ### Ops + packaging - [Control UI](https://docs.openclaw.ai/web) + [WebChat](https://docs.openclaw.ai/web/webchat) served directly from the Gateway.
 - [Tailscale Serve/Funnel](https://docs.openclaw.ai/gateway/tailscale) or [SSH tunnels](https://docs.openclaw.ai/gateway/remote) with token/password auth. - [Nix mode](https://docs.openclaw.ai/install/nix) for declarative config; [Docker](https://docs.openclaw.ai/install/docker)-based installs. - [Doctor](https://docs.openclaw.ai/gateway/doctor) migrations, [logging](https://docs.openclaw.ai/logging).
+
+---
+
+## Japan business skill packs (consulting / talent / marketing)
+
+This section lists **recommended ClawHub skills** for running Japan-focused businesses with OpenClaw.
+Because the registry changes quickly and quality varies, prefer this workflow:
+
+```bash
+clawhub inspect <slug>   # review files/scripts/requirements
+clawhub install <slug>
+openclaw skills info <slug>
+openclaw skills check
+```
+
+> ⚠️ Safety
+>
+> - Treat skills as executable code. Do not install untrusted skills.
+> - For any “send/publish/purchase/book” action, use an approval gate and explicit confirmation.
+
+### A) Enterprise tech consulting & business system development (Japan)
+
+**P0 (core delivery / DevOps / cloud-native):**
+
+- `devops`
+- `sw-devops`
+- `kubernetes`
+- `terraform-engineer`
+- `k8s-gen`
+
+**P1 (platform components / ops):**
+
+- `sw-kafka-kubernetes`
+- `sw-kafka-devops`
+- `k8s-capi`
+- `k8s-browser`
+
+Install (example):
+
+```bash
+clawhub install devops
+clawhub install sw-devops
+clawhub install kubernetes
+clawhub install terraform-engineer
+clawhub install k8s-gen
+```
+
+Discover tool-chain integrations (pick the ones your client actually uses):
+
+```bash
+clawhub search jira
+clawhub search confluence
+clawhub search notion
+clawhub search redmine
+clawhub search backlog
+clawhub search github
+clawhub search gitlab
+clawhub search aws terraform
+clawhub search azure terraform
+clawhub search gcp terraform
+clawhub search threat model
+clawhub search security audit
+```
+
+### B) IT talent training & staffing / dispatch (SES / 派遣)
+
+**P0 (recruiting + training delivery):**
+
+- `resume-cog` (ATS-friendly resume building)
+- Meeting notes/action items skill (search below)
+- Course/curriculum/quiz generator skills (search below)
+- Autograder/test runner skills for assignments (search below)
+
+Suggested searches (choose high-quality skills that match your stack):
+
+```bash
+clawhub search ats resume
+clawhub search recruiter pipeline
+clawhub search interview questions
+clawhub search curriculum course lesson quiz
+clawhub search assignment autograde grader
+clawhub search meeting minutes action items
+clawhub search jira
+clawhub search notion
+```
+
+Japan channel note:
+
+- LINE is typically enabled as a **channel plugin** (`@openclaw/line`) rather than a ClawHub skill. Use ClawHub for workflows (follow-ups, templates, summaries).
+
+### C) Product marketing (Japan)
+
+**P0 (content + distribution + lead nurture):**
+
+- Content/copy/landing/SEO skills (search below)
+- Social scheduling (e.g. `mixpost`)
+- CRM/email campaign skills (HubSpot/Zoho/Salesforce etc. — choose via search)
+- Competitive monitoring (RSS/brand monitoring)
+
+Suggested searches:
+
+```bash
+clawhub search content factory
+clawhub search copywriting
+clawhub search landing page
+clawhub search seo
+clawhub search mixpost
+clawhub search hubspot
+clawhub search zoho crm
+clawhub search salesforce
+clawhub search newsletter email campaign
+clawhub search competitor tracking
+clawhub search brand monitoring
+```
+
+Japan-specific expansions (pick what you need):
+
+```bash
+# LINE OA / customer follow-up workflows (channel plugin handles messaging; skills handle workflow)
+clawhub search line marketing
+clawhub search line oa
+
+# Ecommerce platforms
+clawhub search rakuten
+clawhub search yahoo shopping
+clawhub search amazon seller
+
+# Analytics
+clawhub search posthog
+clawhub search google analytics
+clawhub search mixpanel
+```
